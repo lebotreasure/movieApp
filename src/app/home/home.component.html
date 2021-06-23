@@ -1,6 +1,6 @@
 <div class="main">
   <!-- Another variation with a button -->
-  {{ movieName }}
+  <!-- {{ movieName }} -->
 
   
   <div class="input-group">
@@ -9,6 +9,7 @@
       class="form-control"
       [(ngModel)]="movieName"
       placeholder="Search for movies or series"
+      
     />
     <div class="input-group-append">
       <button (click)="submit()" class="btn btn-secondary" type="button">
@@ -16,7 +17,20 @@
       </button>
     </div>
   </div>
-  <div *ngFor="let data of titles">
-    <p>{{ data.Title }}</p>
-  </div>
+
+    <div class="row px-5">
+      <div class="col-md-3 p-3" *ngFor="let data of titles">
+        <mdb-card>
+        <mdb-card-img src={{data.Poster}} alt="Card image cap"></mdb-card-img>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>{{data.Title}}</h4>
+            <h4>{{data.Year}}</h4>
+            <h4>{{data.Type}}</h4>
+          </mdb-card-title>
+        </mdb-card-body>
+      </mdb-card>
+      </div>
+    </div>
 </div>
+
