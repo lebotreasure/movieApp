@@ -1,0 +1,122 @@
+.cls_form_container{
+
+    width: 392px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    form{
+        border-style: none !important;
+    padding: 0 !important;
+    }
+
+}
+
+.cls_body{
+    background-color:rgb(242 245 247)
+}
+
+.navbar__pd{
+  
+    padding-left: 20px;
+
+    padding-right: 20px;
+
+}
+
+
+    .cls_large_logo{
+        padding: 32px 140px ;
+        display: block;
+    }
+
+    .cls_small_logo{
+
+      width: 32px;
+      display: none;
+    }
+
+
+    /* unvisited link */
+a:link {
+    color: #2d3846;
+  }
+
+   a{
+    font-size: 15px;
+  }
+
+
+  
+  /* visited link */
+ 
+  
+  /* mouse over link */
+  a:hover {
+    color: #d87e18;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #df7e10;
+  }
+
+  .cls_button{
+    font: 400 1rem Arial;
+    width: 141.5px;
+    border-radius: 5px;
+    text-transform: none !important;/*For Lower case use lowercase*/
+  }
+
+  .main{
+    height:90vh;
+  }
+ input{height: 48px;}
+
+  
+    @media (max-width: 768px) {
+        .cls_large_logo{
+            padding: 32px 140px ;
+            display: none;
+        }
+    
+        .cls_small_logo{
+
+            width: 32px;
+            display: block;
+          }
+
+          .main{
+            height:100vh;
+          }
+      }
+
+
+      @media (max-width: 1280px) {
+        .cls_font { 
+            font-size: 13px !important;
+  
+             
+        }
+      }
+      body, html {
+        height: 100%;
+      }
+      
+      .carousel-inner img {
+        -webkit-filter: grayscale(90%);
+        filter: grayscale(90%); /* make all photos black and white */
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+      }
+      
+      .carousel-caption h3 {
+        color: #fff !important;
+      }
+      
+      @media (max-width: 600px) {
+        .carousel-caption {
+          display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+        }
+      }  
+
+    

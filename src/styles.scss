@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: Arial, Helvetica, sans-serif !important;  
+  width: 100vw;
+  
+  background-image: url('./assets//wheel.jpeg');
+  height: 88vh;
+  background-position: center; 
+  background-size: cover;
+  border-radius: 0px!Important;
+
+ 
+}
+
+.row{
+  margin: 0;
+}
+
+html, body {
+  height:100%;
+  background-color: #666699;
+}
+
+.well {
+  background-color: #ffffee
+}
+
+#content {
+  padding: 25% 25% 5%;  
+}
+
+.search-form {
+  border-radius: 100px;
+  border-right: 1000px;
+}
+
+.input-group {
+  width:100%;
+}
+
+input-group-btn {
+  max-width:100px;
+}
+
+#search {
+  border: 1px;
+}
+
+.search-btn {
+  cursor:pointer;
+  border-radius: 0 30px 30px 0; 
+  background-color:#fff;
+  color:#669;
+  align-items: center;
+  
+}
+
+.text-center {
+  color: #fff;
+}
