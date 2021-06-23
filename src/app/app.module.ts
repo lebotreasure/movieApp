@@ -9,11 +9,14 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import {AccordionModule} from 'ngx-bootstrap/accordion';
 import { AppRoutingModule } from './app.routing';
+import { HomeComponent } from './home/home.component';
+import { MoviesComponent } from './movies/movies.component';
+import { SearchedMoviesComponent } from './searchedMovies/searchedMovies.component';
 
 
 @NgModule({
   declarations: [	
-    AppComponent,
+    AppComponent, HomeComponent, MoviesComponent, SearchedMoviesComponent,
       
    ],
   imports: [
