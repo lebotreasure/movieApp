@@ -1,1 +1,13 @@
-<p>movies works!</p>
+<h1>Movies</h1>
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let movies of search">
+      <img src={{movies.Poster}}
+      class="img-fluid img-thumbnail"
+      alt="zoom">
+      
+      <h4>{{movies.Title}}</h4>
+      <h5>Movie type: {{ movies.Type }}</h5>
+      <h5>Year movie was released on: {{ movies.Year }}</h5>
+
+  </div>
+</div>

@@ -1,25 +1,20 @@
 <mdb-navbar SideClass=" navbar shadow-none navbar__bg navbar-expand-lg navbar-light white" [containerInside]="false">
 
-  <div class="cls_large_logo" >
-    <img href="#" src = "../assets/games.png" style="width: 300px;" alt="">
-  </div>
-
-
-  <links>    
-    <ul class="navbar-nav ml-auto" style="padding-right: 50px;">
-      <div class="d-lg-flex d-md-inline">
-        <a mdbBtn class="nav-link waves-light cls_button shadow-none" color="blue" mdbWavesEffect outline="true" [routerLink]="''">Home</a>
-        <a mdbBtn class="nav-link waves-light cls_button shadow-none" color="blue" mdbWavesEffect outline="true" [routerLink]="''">Movies / Series</a>
-      </div>
-    </ul>
-  </links>
-
-</mdb-navbar>
-
-
-<body>
-      <div class = "container">    
-        <router-outlet></router-outlet> 
-        <p class="text-center">More Life, More Streaming</p>
-      </div>
+    <div class="cls_large_logo" >
+      <img href="#" src = "../assets/games.png">
+    </div>
+  
+  
+    <links>    
+      <ul class="navbar-nav ml-auto" style="padding-right: 50px;">
+        <div class="d-lg-flex d-md-inline">
+          <a mdbBtn class="nav-link waves-light cls_button shadow-none" color="blue" mdbWavesEffect outline="true" [routerLink]="'/home'">Home</a>
+          <a mdbBtn class="nav-link waves-light cls_button shadow-none" color="blue" mdbWavesEffect outline="true" [routerLink]="'/movies'">Movies / Series</a>
+        </div>
+      </ul>
+    </links>
+  
+  </mdb-navbar>
+  <body>
+<router-outlet></router-outlet> 
 </body>

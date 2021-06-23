@@ -12,11 +12,15 @@ import { AppRoutingModule } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { SearchedMoviesComponent } from './searchedMovies/searchedMovies.component';
-
+import { MoviesService } from './movies.service';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [	
-    AppComponent, HomeComponent, MoviesComponent, SearchedMoviesComponent,
+    AppComponent,
+    HomeComponent,
+    MoviesComponent, 
+    SearchedMoviesComponent,
       
    ],
   imports: [
@@ -25,10 +29,10 @@ import { SearchedMoviesComponent } from './searchedMovies/searchedMovies.compone
     MDBBootstrapModule.forRoot(),
     FormsModule,
     AccordionModule.forRoot(),
-  
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [MoviesService],
   bootstrap: [AppComponent],
   
 })
