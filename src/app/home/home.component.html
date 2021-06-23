@@ -1,1 +1,22 @@
-<p>home works!</p>
+<div class="main">
+  <!-- Another variation with a button -->
+  {{ movieName }}
+
+  
+  <div class="input-group">
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="movieName"
+      placeholder="Search for movies or series"
+    />
+    <div class="input-group-append">
+      <button (click)="submit()" class="btn btn-secondary" type="button">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+  <div *ngFor="let data of titles">
+    <p>{{ data.Title }}</p>
+  </div>
+</div>

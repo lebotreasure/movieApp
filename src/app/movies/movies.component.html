@@ -1,13 +1,15 @@
 <h1>Movies</h1>
-<div class="grid-container">
-  <div class="grid-item" *ngFor="let movies of search">
-      <img src={{movies.Poster}}
-      class="img-fluid img-thumbnail"
-      alt="zoom">
-      
-      <h4>{{movies.Title}}</h4>
-      <h5>Movie type: {{ movies.Type }}</h5>
-      <h5>Year movie was released on: {{ movies.Year }}</h5>
-
+<div class="row px-5">
+  <div class="col-md-3 mx-auto my-5" *ngFor="let movies of search">
+    <mdb-card>
+    <mdb-card-img src={{movies.Poster}} alt="Card image cap"></mdb-card-img>
+    <mdb-card-body>
+      <mdb-card-title>
+        <h4>{{movies.Title}}</h4>
+      </mdb-card-title>
+      <!-- <a href="#" mdbBtn color="primary" mdbWavesEffect>More Info</a> -->
+    </mdb-card-body>
+  </mdb-card>
   </div>
 </div>
+
