@@ -1,13 +1,22 @@
-<h1>Movies</h1>
+
+<div class="mt-5" style="display: flex;justify-content: center; color: whitesmoke;">
+  <h1>Movies</h1>
+</div>
 <div class="row px-5">
-  <div class="col-md-3 mx-auto my-5" *ngFor="let movies of search">
-    <mdb-card>
-    <mdb-card-img src={{movies.Poster}} alt="Card image cap"></mdb-card-img>
+  <div class="col-md-3 mx-auto my-5" *ngFor="let movie of search">
+    <mdb-card style="height: 100%;">
+    <img src={{movie.Poster}} alt="Card image cap" style="height: 380px;">
     <mdb-card-body>
-      <mdb-card-title>
-        <h4>{{movies.Title}}</h4>
-      </mdb-card-title>
-      <a [routerLink]="'/searchedMovies'" mdbBtn color="primary" mdbWavesEffect>More Info</a>
+      <div style="height: 60px; overflow: hidden;">
+        <h4>{{movie.Title}}</h4>
+      </div>
+       
+      
+     
+      <div style="display: flex;justify-content: center;">
+        <button (click) ="openModal(movie)" mdbBtn type="button"  color="info" outline="true" mdbWavesEffect>More info</button>
+      </div>
+     
     </mdb-card-body>
   </mdb-card>
   </div>

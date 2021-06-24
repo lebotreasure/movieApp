@@ -1,6 +1,9 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from '../movies.service';
+import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
+import { MoviesService } from '../services/movies.service';
+import { StoreService } from '../services/Store/Store.service';
+import { InfoComponent } from './info/info.component';
 
 @Component({
   selector: 'app-movies',
@@ -12,8 +15,9 @@ export class MoviesComponent implements OnInit {
    movieTitle:any[];
    search: any[]= [];
    movieArr:any[] =['Avengers','Fast','Princess','Harry'];
+   modalRef: MDBModalRef;
 
-  constructor(private moviesService: MoviesService) { }
+  constructor(private moviesService: MoviesService,private modalService: MDBModalService,private store:StoreService) { }
 
   ngOnInit(): void {
     for (const i in this.movieArr) {
@@ -27,6 +31,12 @@ export class MoviesComponent implements OnInit {
          console.log(this.search);
     }
 
+}
+
+openModal(movie:any) {
+  console.log(movie);
+  this.store.movieInfo = movie;
+  this.modalRef = this.modalService.show(InfoComponent)
 }
 
 }

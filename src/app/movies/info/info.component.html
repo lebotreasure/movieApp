@@ -1,0 +1,46 @@
+<!-- <mdb-card>
+   
+    <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
+   
+    <mdb-card-body>
+  
+     
+      <mdb-card-title>
+        <h4>Card Title</h4>
+      </mdb-card-title>
+  
+     
+      <mdb-card-text> 
+          {{store.movieInfo | json}}
+      </mdb-card-text>
+  
+      <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+    </mdb-card-body>
+  </mdb-card> -->
+
+
+ 
+    <!-- Card -->
+    <mdb-card
+    
+
+      [ngStyle]="{'background-image': 'url('+store.movieInfo.Poster+')'}"
+      class="card-image"
+    >
+      <!-- Content -->
+      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 justify-content-center">
+        <div>
+          <h5 class="pink-text">
+            <mdb-icon fas icon="chart-pie"></mdb-icon>
+            {{store.movieInfo.Type}}
+          </h5>
+          <h3 class="card-title pt-2"><strong>{{store.movieInfo.Title}}</strong></h3>
+          <p>
+           
+          </p>
+        
+        </div>
+      </div>
+      <!-- Content -->
+    </mdb-card>
+   

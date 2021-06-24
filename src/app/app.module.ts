@@ -12,15 +12,18 @@ import { AppRoutingModule } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { SearchedMoviesComponent } from './searchedMovies/searchedMovies.component';
-import { MoviesService } from './movies.service';
 import { HttpClientModule } from "@angular/common/http";
+import { NewReleaseComponent } from './new-release/new-release.component';
+import { InfoComponent } from './movies/info/info.component';
+import { MoviesService } from './services/movies.service';
+import { StoreService } from './services/Store/Store.service';
 
 @NgModule({
   declarations: [	
     AppComponent,
     HomeComponent,
     MoviesComponent, 
-    SearchedMoviesComponent,
+    SearchedMoviesComponent, NewReleaseComponent, InfoComponent,
       
    ],
   imports: [
@@ -31,9 +34,11 @@ import { HttpClientModule } from "@angular/common/http";
     AccordionModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+    
   ],
-  providers: [MoviesService],
+  providers: [MoviesService,StoreService],
   bootstrap: [AppComponent],
+  entryComponents:[InfoComponent]
   
 })
 export class AppModule { }
