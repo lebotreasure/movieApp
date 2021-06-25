@@ -21,20 +21,16 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit(): void {
     for (const i in this.movieArr) {
-      console.log(this.search);
       this.moviesService.getMovies(this.movieArr[i]).subscribe((value: any) => {
            for (const movie in value.Search) {
-             console.log(value.Search[movie]);
              this.search.push(value.Search[movie])
            }
          });
-         console.log(this.search);
     }
 
 }
 
 openModal(movie:any) {
-  console.log(movie);
   this.store.movieInfo = movie;
   this.modalRef = this.modalService.show(InfoComponent)
 }

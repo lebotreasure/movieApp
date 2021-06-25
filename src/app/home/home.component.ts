@@ -15,6 +15,10 @@ import { MoviesService } from '../services/movies.service';
 
  ngOnInit() { }
 
+ clearSearch(){
+   this.movieName='';  
+}
+
  submit() {
    this.moviesService.getMovies(this.movieName)
    .subscribe((item:any) => {
@@ -22,3 +26,5 @@ import { MoviesService } from '../services/movies.service';
      this.titles= item.Search 
     })
  }}
+
+ 
