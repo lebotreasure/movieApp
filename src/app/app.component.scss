@@ -25,7 +25,7 @@
 
 
     .cls_large_logo{
-        padding: 32px 140px ;
+        padding: 2px 100px ;
         display: block;
     }
 
@@ -75,14 +75,14 @@ a:link {
   
     @media (max-width: 768px) {
         .cls_large_logo{
-            padding: 32px 140px ;
+            padding: 50px 140px ;
             display: none;
         }
     
         .cls_small_logo{
 
             width: 100%;
-            //display: block;
+            display: block;
           }
 
           .main{
@@ -118,6 +118,9 @@ a:link {
           display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
         }
       }  
+      .body {
+        background: url("../assets//games1.png");
+      }
       
       
 

@@ -14,7 +14,7 @@ export class MoviesComponent implements OnInit {
    @Input("Movies") movies: any;
    movieTitle:any[];
    search: any[]= [];
-   movieArr:any[] =['Avengers','Fast','Princess','Harry'];
+   movieArr:any[] =['Cinderella','Fast','Princess','Harry','Little','Bay','Hard', 'Floor','Spiderman', 'Batman', 'Game of Thrones', 'Vikings', 'Suits', 'Power', 'Cars', 'Disney','Transformers','Avengers','Race','X-Men'];
    modalRef: MDBModalRef;
 
   constructor(private moviesService: MoviesService,private modalService: MDBModalService,private store:StoreService) { }

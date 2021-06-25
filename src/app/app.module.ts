@@ -13,7 +13,6 @@ import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { SearchedMoviesComponent } from './searchedMovies/searchedMovies.component';
 import { HttpClientModule } from "@angular/common/http";
-import { NewReleaseComponent } from './new-release/new-release.component';
 import { InfoComponent } from './movies/info/info.component';
 import { MoviesService } from './services/movies.service';
 import { StoreService } from './services/Store/Store.service';
@@ -23,7 +22,7 @@ import { StoreService } from './services/Store/Store.service';
     AppComponent,
     HomeComponent,
     MoviesComponent, 
-    SearchedMoviesComponent, NewReleaseComponent, InfoComponent,
+    SearchedMoviesComponent, InfoComponent,
       
    ],
   imports: [

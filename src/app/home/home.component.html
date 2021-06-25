@@ -8,18 +8,18 @@
       type="text"
       class="form-control"
       [(ngModel)]="movieName"
-      placeholder="Search for movies or series"
+      placeholder="Search for movies or series available"
       
     />
     <div class="input-group-append">
-      <button (click)="submit()" class="btn btn-secondary" type="button">
+      <button [disabled] = "!movieName" (click)="submit()" class="btn btn-secondary" type="button">
         <i class="fa fa-search"></i>
       </button>
     </div>
   </div>
 
     <div class="row px-5">
-      <div class="col-md-3 p-3" *ngFor="let data of titles">
+      <div class="col-md-4 p-3" *ngFor="let data of titles">
         <mdb-card>
         <mdb-card-img src={{data.Poster}} alt="Card image cap"></mdb-card-img>
         <mdb-card-body>
